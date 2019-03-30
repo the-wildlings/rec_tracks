@@ -29,8 +29,8 @@ module.exports = {
             loader: 'css-loader',
             query: {
               modules: true,
-              localIdentName: '[name]__[loader]__[hash:base64:5]'
-            }
+              localIdentName: '[name]__[loader]__[hash:base64:5]',
+            },
           }
         ])
       }
