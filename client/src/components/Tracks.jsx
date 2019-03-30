@@ -6,7 +6,7 @@ const Track = (props) => {
   return (
     <div className={styles.container}>
       <div className={styles.title}>
-        Recommended Tracks
+        RECOMMENDED TRACKS
       </div>
       <br />
       <div className={`${styles.row} ${styles.headers}`}>
@@ -14,9 +14,9 @@ const Track = (props) => {
         <div className={styles.titlecol}>TITLE</div>
         <div className={styles.artistcol}>ARTISTS</div>
         <div className={styles.remixercol}>REMIXERS</div>
-        <div className={styles.remixercol}>LABEL</div>
-        <div className={styles.remixercol}>GENRE</div>
-        <div className={styles.remixercol}>RELEASED</div>
+        <div className={styles.labelcol}>LABEL</div>
+        <div className={styles.genrecol}>GENRE</div>
+        <div className={styles.releasedcol}>RELEASED</div>
       </div>
       {props.songList.map((song, index) => <TrackItem song={song} key={index}/>)}
     </div>
