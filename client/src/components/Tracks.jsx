@@ -1,12 +1,24 @@
 import React from 'react';
 import styles from '../../dist/styles/app.css';
 import TrackItem from './TrackItem.jsx';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPlay } from '@fortawesome/free-solid-svg-icons'
+import { faTasks } from '@fortawesome/free-solid-svg-icons'
+
 
 const Track = (props) => {
   return (
     <div className={styles.container}>
       <div className={`${styles.title} ${styles.titleBottom}`}>
         RECOMMENDED TRACKS
+        <div className={styles.buttons}>
+          <div className={styles.playButton}>
+            <FontAwesomeIcon icon={faPlay} id={styles.playButton} />
+          </div>
+          <div>
+            <FontAwesomeIcon icon={faTasks} id={styles.queueButton} />            
+          </div>
+        </div>
       </div>
 
       {/* Header information */}
