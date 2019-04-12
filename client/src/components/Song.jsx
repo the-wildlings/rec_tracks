@@ -1,13 +1,18 @@
-import React, {Component} from 'react';
-import styles from '../../dist/styles/app.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlay } from '@fortawesome/free-solid-svg-icons';
-import { faTasks } from '@fortawesome/free-solid-svg-icons';
+import React, { Component } from 'react';
+import styles from '../../dist/styles/wave.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPlay } from '@fortawesome/free-solid-svg-icons'
+import { faTasks } from '@fortawesome/free-solid-svg-icons'
+import { faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faFacebookF } from '@fortawesome/free-brands-svg-icons';
+import { faLink } from '@fortawesome/free-solid-svg-icons';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 
-class TrackItem extends Component {
+import WaveForm from './WaveForm';
+
+export default class Song extends Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
       showMenu: false
     }
@@ -30,26 +35,30 @@ class TrackItem extends Component {
 
   render() {
     return (
-      <div className={styles.row}>
-        <div className={`${styles.playCol} ${styles.playDetail}`}>
-          <img src="https://cdn.cp.adobe.io/content/2/rendition/71d1c3da-f692-4ab8-8952-cff3b35ee3b9/version/1/format/jpg/dimension/width/size/1200" />
-          <div id={styles.miniPlay}><FontAwesomeIcon icon={faPlay} /> </div>
-          <FontAwesomeIcon icon={faTasks} id={styles.miniQueue} />
+    <div className={styles.container}>
+      <div className={styles.title}>TRACK</div>
+
+      <div className={styles.songName}>
+        <div className={styles.songTitle}>{this.props.song.title}</div>
+        <div>
+          {this.props.song.remixers}
         </div>
-        <div className={styles.titleCol}>
-          <span className={styles.titleDetail}>{this.props.song.title}</span> {/* */
-          }<span className={styles.versionDetail}>{this.props.song.version}</span>
+        <div className={styles.songVersion}>{this.props.song.version}</div>
+        
+        <div className={styles.buttons}>
+          <div className={styles.playButton}>
+            <FontAwesomeIcon icon={faPlay} id={styles.playButton} />
+          </div>
+          <div>
+            <FontAwesomeIcon icon={faTasks} id={styles.queueButton} />
+          </div>
         </div>
-        <div className={`${styles.artistCol} ${styles.artistDetail}`}>{this.props.song.artist}</div>
-        <div className={`${styles.remixerCol} ${styles.remixerDetail}`}></div>
-        <div className={`${styles.labelCol} ${styles.labelDetail}`}>{this.props.song.label}</div>
-        <div className={`${styles.genreCol} ${styles.genreDetail}`}>{this.props.song.genre}</div>
-        <div className={`${styles.releasedCol} ${styles.releasedDetail}`}>{this.props.song.released}</div>
-        <div className={`${styles.priceCol} ${styles.priceDetail}`}>
+
+        <div className={styles.priceDetail}>
           <div id={styles.innerBox}>${this.props.song.price}</div>
           <div id={styles.boxArrow} onClick={this.showMenu}><FontAwesomeIcon icon={faChevronDown} /></div>
-        </div>
           {
+            //Jeff wuz here
             this.state.showMenu
               && (
                 <div className={styles.menu}>
@@ -149,9 +158,93 @@ class TrackItem extends Component {
                 </div>
               )
           }
+        </div>
+
+        <div className={styles.socialBox}>
+          <FontAwesomeIcon icon={faTwitter} id={styles.iconTwitter} />
+        </div>
+
+        <div className={styles.socialBox}>
+          <FontAwesomeIcon icon={faFacebookF} id={styles.iconFb} />
+        </div>
+
+        <div className={styles.socialBox}>
+          <FontAwesomeIcon icon={faLink} id={styles.iconLink} />
+        </div>
+
       </div>
+
+      <div className={styles.artistRow}>
+        <div className={styles.artist}>ARTISTS</div>
+        <div className={styles.artistName}>{this.props.song.artist}</div>
+        <div className={styles.release}>RELEASE</div>
+      </div>
+      
+      { this.props.song.version !== 'Original Mix' &&
+          <div className={styles.remixers}>
+            REMIXERS
+          </div>
+      }
+
+      <div className={styles.waveAlbumRow}>
+        <div className={styles.wave}>
+          <WaveForm svg={"https://s3-us-west-1.amazonaws.com/airbnbeats/Database+Media/SoundWaves/Riviera-Kartell.svg"} />
+        </div>
+        <div>
+          <img src="https://s3-us-west-1.amazonaws.com/airbnbeats/Database+Media/Album+Art/Riviera-Kartell.jpg" className={styles.album}/>
+        </div>
+      </div>
+
+      <div className={styles.songDetail}>
+        <div className={`${styles.lengthBlock} ${styles.spaceLength}`}>
+          <div className={`${styles.type}`}>
+            LENGTH
+          </div>
+          <div className={styles.length}>
+            {Math.floor(this.props.song.length / 60)}:{
+              String(this.props.song.length % 60).length < 2 ? String(this.props.song.length % 60) + 0 : this.props.song.length % 60
+              }
+          </div>
+        </div>
+
+        <div className={`${styles.releasedBlock} ${styles.spaceReleased}`}>
+          <div className={styles.type}>
+            RELEASED
+          </div>
+          <div className={styles.released}>{this.props.song.released}</div>
+        </div>
+
+        <div className={`${styles.bpmBlock} ${styles.spaceBK}`}>
+          <div className={styles.type}>
+            BPM
+          </div>
+          <div className={styles.bpm}>{this.props.song.bpm}</div>
+        </div>
+
+        <div className={`${styles.keyBlock} ${styles.spaceBK}`}>
+          <div className={styles.type}>
+            KEY
+          </div>
+          <div className={styles.key}>{this.props.song.key}</div>
+        </div>
+
+        <div className={`${styles.genreBlock} ${styles.spaceGenre}`}>
+          <div className={styles.type}>
+            GENRE
+          </div>
+          <div className={styles.genre}>{this.props.song.genre}</div>
+        </div>
+
+        <div className={`${styles.labelBlock} ${styles.spaceLabel}`}>
+          <div className={styles.type}>
+            LABEL
+          </div>
+          <div className={styles.label}>{this.props.song.label}</div>
+        </div>
+
+        
+      </div>
+    </div>
     )
   }
 }
-
-export default TrackItem;

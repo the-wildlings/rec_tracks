@@ -1,6 +1,7 @@
 import styles from '../../dist/styles/app.css';
 import React, { Component } from 'react';
 import Tracks from './Tracks';
+import Song from './Song';
 import axios from 'axios';
 
 export default class App extends Component {
@@ -25,6 +26,9 @@ export default class App extends Component {
   render() {
     return (
       <div className={styles.element}>
+        { this.state.songList.length !== 0 &&
+          <Song song={this.state.songList[0]} />
+        }
         <Tracks songList={this.state.songList}/>
       </div>
     )
