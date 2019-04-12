@@ -12,7 +12,7 @@ var bpSchema = new mongoose.Schema({
   title: {type: String, allowNull: false},
   version: {type: String, allowNul: false},
   artist: { type: String, allowNul: false },
-  album_name: { type: String, allowNul: false },
+  album: { type: String, allowNul: false },
   remixers: { type: String, allowNul: false },
   genre: { type: String, allowNul: false },
   label: { type: String, allowNul: false },
