@@ -1,0 +1,412 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*
+  ========================================
+  Custom styles
+  ========================================
+*/
+
+body {
+  background-color: #262626;
+}
+
+.element {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 13px;
+  font-family: 'Source Sans Pro', Arial, sans-serif;
+}
+
+.title {
+  font-family: 'Oswald', Arial, sans-serif;
+  color: white;
+  font-weight: 200;
+  font-size: 22px;
+  letter-spacing: 1.5px;
+  display: flex;
+  margin-top: 70px;
+}
+
+.titleBottom {
+  border-bottom: 1px solid #494949;
+}
+
+.headers {
+  display: flex;
+  color: #dcdcdc;
+  font-size: 12px;
+  letter-spacing: 1.25px;
+  padding: 8px;
+}
+
+/*
+  ========================================
+  Row & Cols
+  ========================================
+*/
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.row {
+  display: flex;
+  background-color: #373737;
+  margin-bottom: 2px;
+  padding: 8px;
+  position: relative;
+}
+
+.playCol {
+  flex: 8%;
+  display: inline-block;
+  /* overflow: hidden;
+  white-space : nowrap; */
+  /* white-space: nowrap; */
+}
+
+/* #picture {
+  margin: 2px;
+} */
+
+.titleCol {
+  flex: 28%;
+}
+
+.artistCol {
+  flex: 18%;
+}
+
+
+.remixerCol,
+.labelCol,
+.genreCol,
+.releasedCol,
+.priceCol {
+  flex: 12%;
+}
+
+.container {
+  margin: 0 auto;
+  /* width: 1360px; */
+  width: 1350px;
+  white-space: nowrap;
+  flex-wrap: nowrap;
+}
+
+.priceCol {
+  margin-left: -8px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+/*
+  ========================================
+  Item Detail
+  ========================================
+*/
+
+.artistDetail,
+.remixerDetail,
+.labelDetail,
+.genreDetail,
+.releasedDetail {
+  font-size: 11px;
+}
+
+.titleDetail {
+  font-size: 12px;
+  color: white;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.versionDetail {
+  font-size: 12px;
+  color: white;
+  font-weight: 200;
+  letter-spacing: 0.5px;
+}
+
+.artistDetail {
+  color: #39c1de;
+  font-weight: 600;
+  font-size: 11px;
+}
+
+.priceDetail {
+  text-align: center;
+  vertical-align: middle;
+}
+
+#innerBox {
+  background-color: #ff53a0;
+  padding: 6px 10px 5px 10px;
+  color: white;
+  font-weight: 600;
+  font-size: 12.5px;
+  font-family: "Core Sans E", Arial, sans-serif;
+  opacity: 0.3;
+  border-top-left-radius: 12%;
+  border-bottom-left-radius: 12%;
+  float: right;
+  margin-bottom: -4px;
+  margin-top: -4px;
+  cursor: pointer;
+}
+
+#boxArrow {
+  float: right;
+  background-color: #d44183;
+  margin-top: -4px;
+  margin-bottom: -4px;
+  padding: 7px 7px 0 7px;
+  color: white;
+  border-top-right-radius: 12%;
+  border-bottom-right-radius: 12%;
+  opacity: 0.3;
+  cursor: pointer;
+}
+
+.playDetail {
+  margin: -8px 8px -8px -8px;
+}
+
+/*
+  ========================================
+  Play/Queue Button
+  ========================================
+*/
+
+.buttons {
+  display: flex;
+  background-color: #262626;
+  border-top-right-radius: 42%;
+  border-bottom-right-radius: 42%;
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+  margin-bottom: 10px;
+  margin-left: 25px;
+  transition: 0.3s;
+}
+
+.buttons:hover {
+  opacity: 1;
+  background-color: #363636;
+  cursor: pointer;
+}
+
+#playButton {
+  font-size: 0.8em;
+  text-align: center;
+  margin-bottom: 8px;
+  margin-left: 11px;
+}
+
+.playButton {
+ background-color: #5a5a5a;
+ border-radius: 50%;
+ height: 1.66em;
+ width: 1.66em;
+ padding-top: 8px;
+ transition: 0.3s;
+}
+
+
+.playButton:hover {
+  cursor: pointer;
+  background-color: #4d4d4d;
+}
+
+#queueButton {
+  font-size: 0.7em;
+  text-align: center;
+  margin-left: 8px;
+  margin-right: 12px;
+  margin-top: 10px;
+}
+
+/*
+  ========================================
+  Play Col, album/play/queue
+  ========================================
+*/
+
+img {
+  height: 33px;
+  width: 30px;
+  float: left;
+  white-space: nowrap;
+}
+
+#miniPlay {
+  margin-left: 10px;
+  margin-top: 9px;
+  font-size: 1.2em;
+  cursor: pointer;
+  float: left;
+  white-space: nowrap;
+}
+
+#miniQueue {
+  margin-top: 8px;
+  margin-left: 12px;
+  margin-bottom: 8px;
+  font-size: 1.3em;
+  cursor: pointer;
+  float: left;
+  white-space: nowrap;
+}
+
+.row:hover .playCol {
+  color: white;
+  transition: 0.5s;
+}
+
+.row:hover #innerBox {
+  opacity: 1;
+  transition: 0.5s;
+}
+
+.row:hover #boxArrow {
+  opacity: 1;
+  transition: 0.5s;
+}
+
+/* flex wrp no wrap
+white-space: nowrap
+overflow hidden
+media queries */
+
+/*
+  ========================================
+  Hide col as width shrinks
+  ========================================
+*/
+
+@media screen and (max-width: 1100px) {   .remixerCol { display: none; } }
+ 
+@media screen and (max-width: 900px) {    .labelCol{ display: none; } }
+ 
+@media screen and (max-width: 600px) {    .releasedCol { display: none; } }
+ 
+@media screen and (max-width: 400px) {    .remixerCol { display: none; } }
+
+/*
+  ========================================
+  Click menu
+  ========================================
+*/
+
+.menu {
+  position: absolute;
+  top: 24px;
+  right: 3px;
+  z-index: 1;
+  opacity: 0.7;
+  border: 1px solid black;
+  background-color: black;
+  margin: 5px;
+  /* padding-top: 40px; */
+}
+
+.innerRow {
+  display: flex;
+  background-color: #252525;
+  margin: 3px 3px 2px 3px;
+  padding: 5px 150px 5px 0;
+  cursor: pointer;
+}
+
+.lastRow {
+  display: flex;
+  background-color: black;
+  margin: 3px 3px 2px 3px;
+  padding: 5px 150px 5px 0;
+  cursor: pointer;
+
+}
+
+.innerElement {
+  color: white;
+  font-weight: 600;
+  z-index: 2;
+  font-size: 13px;
+  font-family: "Core Sans E", Arial, sans-serif;
+  margin-left: 5px;
+}
+
+#star {
+  z-index: 2;
+  fill: #ff53a0;
+  margin-left: 5px;
+}
+
+.innerRow:hover {
+  background-color: #333333;
+}
+
+#bin {
+  z-index: 2;
+  opacity: 1;
+  fill: #94d500;
+  margin-left: 5px;
+}
+
+#plusSign {
+  z-index: 2;
+  opacity: 1;
+  fill: #ff53a0;
+  margin-left: 5px;
+}

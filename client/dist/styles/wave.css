@@ -1,0 +1,386 @@
+.container {
+  margin: 0 auto;
+	width: 1350px;
+}
+
+.title {
+	font-size: 13px;
+	font-family: "Core Sans E", Arial, sans-serif;
+	margin-bottom: 10px;
+	margin-top: 20px;
+	letter-spacing: 1.5px;
+	font-weight: 200;
+}
+
+/*
+  ========================================
+  Song Title Line
+  ========================================
+*/
+
+
+.songName {
+	display: flex;
+	margin-bottom: 30px;
+}
+
+.songTitle {
+	font-family: 'Oswald', Arial, sans-serif;
+	font-size: 34px;
+	font-weight: 200;
+	color: white;
+	letter-spacing: 1.5px;
+	margin-right: 20px;
+	text-transform: uppercase;
+}
+
+.songVersion {
+	font-family: 'Oswald', Arial, sans-serif;
+	font-size: 34px;
+	font-weight: 200;
+	color: #898989;
+	letter-spacing: 1.5px;
+	text-transform: uppercase;
+	margin-right: 40px;
+}
+
+
+
+/*
+  ========================================
+  Play/Queue Button
+  ========================================
+*/
+
+.buttons {
+  display: flex;
+  background-color: #262626;
+  border-top-right-radius: 42%;
+  border-bottom-right-radius: 42%;
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+	transition: 0.3s;
+	margin-right: 20px;
+}
+
+.buttons:hover {
+  opacity: 1;
+  background-color: #363636;
+  cursor: pointer;
+}
+
+#playButton {
+  font-size: 1.3em;
+	text-align: center;
+	color: white;
+	margin-top: 8px;
+	margin-left: 11px;
+}
+
+.playButton {
+	/* margin-top: 2px; */
+	background-color: #5a5a5a;
+	border-radius: 50%;
+	height: 2.7em;
+	width: 2.7em;
+	transition: 0.3s;
+}
+
+
+.playButton:hover {
+  cursor: pointer;
+  background-color: #4d4d4d;
+}
+
+#queueButton {
+	color: white;
+  font-size: 1.2em;
+  text-align: center;
+  margin-left: 8px;
+  margin-right: 12px;
+  margin-top: 8px;
+}
+
+/*
+  ========================================
+  Click menu
+  ========================================
+*/
+
+.priceDetail {
+  text-align: center;
+	vertical-align: middle;
+	display: flex;
+	position: relative;
+}
+
+#innerBox {
+  background-color: #ff53a0;
+	padding-top: 5px;
+	padding-left: 7px;
+	padding-right: 8px;
+  color: white;
+  font-weight: 600;
+  font-size: 12.5px;
+  font-family: "Core Sans E", Arial, sans-serif;
+  border-top-left-radius: 12%;
+  border-bottom-left-radius: 12%;
+	margin-top: 5px;
+	margin-bottom: 5px;
+  cursor: pointer;
+}
+
+#boxArrow {
+  background-color: #d44183;
+  margin-top: 5px;
+	margin-bottom: 5px;
+	margin-right: 25px;
+  padding: 5px 6px 0 6px;
+  color: white;
+  border-top-right-radius: 12%;
+  border-bottom-right-radius: 12%;
+  cursor: pointer;
+}
+
+.menu {
+  position: absolute;
+  top: 30px;
+  z-index: 1;
+  border: 1px solid black;
+  background-color: black;
+	/* margin: 5px; */
+  /* padding-top: 40px; */
+}
+
+.innerRow {
+  display: flex;
+	background-color: #252525;
+  margin: 3px 3px 2px 3px;
+  padding: 5px 150px 5px 0;
+	cursor: pointer;
+}
+
+.lastRow {
+  display: flex;
+  background-color: black;
+  margin: 3px 3px 2px 3px;
+  padding: 5px 150px 5px 0;
+  cursor: pointer;
+}
+
+.innerElement {
+  color: white;
+  font-weight: 600;
+  z-index: 2;
+  font-size: 13px;
+  font-family: "Core Sans E", Arial, sans-serif;
+	margin-left: 5px;
+	width: 70px;
+}
+
+#star {
+  z-index: 2;
+  fill: #ff53a0;
+  margin-left: 5px;
+}
+
+.innerRow:hover {
+  background-color: #333333;
+}
+
+#bin {
+  z-index: 2;
+  opacity: 1;
+  fill: #94d500;
+  margin-left: 5px;
+}
+
+#plusSign {
+  z-index: 2;
+  opacity: 1;
+  fill: #ff53a0;
+  margin-left: 5px;
+}
+
+/*
+  ========================================
+  Social tabs
+  ========================================
+*/
+
+.socialBox {
+	margin-top: 4px;
+	margin-right: 10px;
+	border: 1px solid #494949;
+	background-color: #494949;
+	height: 2em;
+	width: 2em;
+	border-radius: 30%;
+	cursor: pointer;
+}
+
+.socialBox:hover {
+	background-color: #3c3c3c;
+	border: 1px solid #3c3c3c;
+	transition: 0.3s;
+}
+
+#iconTwitter {
+	color: white;
+	text-align: center;
+	font-size: 1.2em;
+	margin-top: 4px;
+	margin-left: 4px;
+}
+
+#iconFb {
+	color: white;
+	text-align: center;
+	font-size: 1.1em;
+	margin-top: 5px;
+	margin-left: 7px;
+}
+
+#iconLink {
+	color: white;
+	text-align: center;
+	font-size: 1em;
+	margin-top: 5px;
+	margin-left: 6px;
+}
+
+/*
+  ========================================
+  Artist/release line
+  ========================================
+*/
+
+.artistRow {
+	display: inline-block;
+	margin-bottom: 10px;
+}
+
+.artist {
+	font-size: 14px;
+	font-family: "Core Sans E", Arial, sans-serif;
+	/* color: #8C8C8C; */
+	font-weight: 200;
+	letter-spacing: 1px;
+	margin-right: 5px;
+	float: left;
+}
+
+.artistName {
+	font-family: 'Source Sans Pro', Arial, sans-serif;
+	font-weight: 600;
+	color: white;
+	font-size: 14px;
+	letter-spacing: 1px;
+	float: left;
+	margin-right: 1100px;
+}
+
+.release {
+	font-size: 14px;
+	font-family: "Core Sans E", Arial, sans-serif;
+	font-weight: 200;
+	letter-spacing: 1px;
+	float: left;
+}
+
+.remixers {
+	font-size: 14px;
+	font-family: "Core Sans E", Arial, sans-serif;
+	/* color: #8C8C8C; */
+	font-weight: 200;
+	letter-spacing: 1px;
+	/* margin-right: 5px; */
+	margin-bottom: 20px;
+}
+
+/*
+  ========================================
+  Wave/Album
+  ========================================
+*/
+
+.waveAlbumRow {
+	display: flex;
+	margin-bottom: 20px;
+}
+
+#wave {
+  
+}
+
+.album {
+	height: 150px;
+	width: 150px;
+}
+
+/*
+  ========================================
+  Song Detail
+  ========================================
+*/
+
+.songDetail {
+	display: inline-block;
+}
+
+.lengthBlock,
+.releasedBlock,
+.bpmBlock,
+.keyBlock,
+.genreBlock {
+	border-right: 1px solid gray;
+	float: left;
+}
+
+.labelBlock {
+	float: left;
+}
+
+
+.type {
+	font-family: "Core Sans E", Arial, sans-serif;
+	font-size: 14px;
+	font-weight: 200;
+	letter-spacing: 0.7px;
+	margin-bottom: 3px;
+}
+
+.spaceLength {
+	padding-right: 175px;
+}
+
+.spaceReleased {
+	padding-left: 10px;
+	padding-right: 145px;
+}
+
+.spaceBK {
+	padding-left: 10px;
+	padding-right: 175px;
+}
+
+.spaceGenre {
+	padding-left: 10px;
+	padding-right: 85px;
+}
+
+.spaceLabel {
+	padding-left: 10px;
+}
+
+.length,
+.released,
+.bpm,
+.key,
+.genre,
+.label {
+	color: white;
+	font-family: 'Source Sans Pro', Arial, sans-serif;
+	font-size: 15px;
+	font-weight: 600;
+}
