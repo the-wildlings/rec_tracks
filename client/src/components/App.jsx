@@ -10,10 +10,26 @@ export default class App extends Component {
     this.state = {
       songList: []
     }
+    this.addToPlayer = this.addToPlayer.bind(this);
+    this.addToQueue = this.addToQueue.bind(this);
   }
 
   componentDidMount() {
     this.fetchSongs();
+  }
+
+  addToPlayer() {
+    axios
+    .get('/api/play/:id')
+    .then(data => data)
+    .catch(err => console.error(err))
+  }
+
+  addToQueue() {
+    axios
+    .get('/api/queue/:id')
+    .then(data => data)
+    .catch(err => console.error(err))
   }
 
   fetchSongs() {
@@ -29,7 +45,7 @@ export default class App extends Component {
         { this.state.songList.length !== 0 &&
           <Song song={this.state.songList[0]} />
         }
-        <Tracks songList={this.state.songList}/>
+        <Tracks songList={this.state.songList} play={this.addToPlayer} queue={this.addToQueue}/>
       </div>
     )
   }

@@ -12,10 +12,10 @@ const Track = (props) => {
       <div className={`${styles.title} ${styles.titleBottom}`}>
         RECOMMENDED TRACKS
         <div className={styles.buttons}>
-          <div className={styles.playButton}>
+          <div className={styles.playButton} onClick={props.play}>
             <FontAwesomeIcon icon={faPlay} id={styles.playButton} />
           </div>
-          <div>
+          <div onClick={props.queue}>
             <FontAwesomeIcon icon={faTasks} id={styles.queueButton} />            
           </div>
         </div>
