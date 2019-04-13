@@ -7,15 +7,18 @@ import { faTasks } from '@fortawesome/free-solid-svg-icons'
 
 
 const Track = (props) => {
+  if (props.songList.length) {
+    console.log(props.songList[0].id)
+  }
   return (
     <div className={styles.container}>
       <div className={`${styles.title} ${styles.titleBottom}`}>
         RECOMMENDED TRACKS
         <div className={styles.buttons}>
-          <div className={styles.playButton} onClick={props.play}>
+          <div className={styles.playButton} onClick={() => props.play(props.songList[0].id)}>
             <FontAwesomeIcon icon={faPlay} id={styles.playButton} />
           </div>
-          <div onClick={props.queue}>
+          <div onClick={props.queue} onClick={() => props.queue(props.songList[0].id)}>
             <FontAwesomeIcon icon={faTasks} id={styles.queueButton} />            
           </div>
         </div>

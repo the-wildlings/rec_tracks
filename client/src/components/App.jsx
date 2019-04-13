@@ -18,16 +18,16 @@ export default class App extends Component {
     this.fetchSongs();
   }
 
-  addToPlayer() {
+  addToPlayer(id) {
     axios
-    .get('/api/play/:id')
+    .get(`/api/play/:${id}`)
     .then(data => data)
     .catch(err => console.error(err))
   }
 
-  addToQueue() {
+  addToQueue(id) {
     axios
-    .get('/api/queue/:id')
+    .get(`/api/queue/:${id}`)
     .then(data => data)
     .catch(err => console.error(err))
   }
