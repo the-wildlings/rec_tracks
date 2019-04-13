@@ -8,7 +8,8 @@ export default class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      songList: []
+      songList: [],
+      currentSong: []
     }
     this.addToPlayer = this.addToPlayer.bind(this);
     this.addToQueue = this.addToQueue.bind(this);
@@ -43,7 +44,7 @@ export default class App extends Component {
     return (
       <div className={styles.element}>
         { this.state.songList.length !== 0 &&
-          <Song song={this.state.songList[0]} />
+          <Song song={this.state.songList[0]} play={this.addToPlayer} queue={this.addToQueue}/>
         }
         <Tracks songList={this.state.songList} play={this.addToPlayer} queue={this.addToQueue}/>
       </div>

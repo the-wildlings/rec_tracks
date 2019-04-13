@@ -57,10 +57,11 @@
   background-color: #262626;
   border-top-right-radius: 42%;
   border-bottom-right-radius: 42%;
-  border-top-left-radius: 50%;
-  border-bottom-left-radius: 50%;
+  border-top-left-radius: 40%;
+  border-bottom-left-radius: 40%;
 	transition: 0.3s;
 	margin-right: 20px;
+	margin-top: 6px;
 }
 
 .buttons:hover {
@@ -78,7 +79,7 @@
 }
 
 .playButton {
-	/* margin-top: 2px; */
+	margin-top: 2px;
 	background-color: #5a5a5a;
 	border-radius: 50%;
 	height: 2.7em;
@@ -98,7 +99,7 @@
   text-align: center;
   margin-left: 8px;
   margin-right: 12px;
-  margin-top: 8px;
+  margin-top: 9px;
 }
 
 /*
@@ -116,7 +117,7 @@
 
 #innerBox {
   background-color: #ff53a0;
-	padding-top: 5px;
+	padding-top: 3px;
 	padding-left: 7px;
 	padding-right: 8px;
   color: white;
@@ -125,15 +126,15 @@
   font-family: "Core Sans E", Arial, sans-serif;
   border-top-left-radius: 12%;
   border-bottom-left-radius: 12%;
-	margin-top: 5px;
-	margin-bottom: 5px;
+	margin-top: 11px;
+	margin-bottom: 11px;
   cursor: pointer;
 }
 
 #boxArrow {
   background-color: #d44183;
-  margin-top: 5px;
-	margin-bottom: 5px;
+  margin-top: 11px;
+	margin-bottom: 11px;
 	margin-right: 25px;
   padding: 5px 6px 0 6px;
   color: white;
@@ -144,7 +145,7 @@
 
 .menu {
   position: absolute;
-  top: 30px;
+  top: 35px;
   z-index: 1;
   border: 1px solid black;
   background-color: black;
@@ -209,7 +210,7 @@
 */
 
 .socialBox {
-	margin-top: 4px;
+	margin-top: 9px;
 	margin-right: 10px;
 	border: 1px solid #494949;
 	background-color: #494949;

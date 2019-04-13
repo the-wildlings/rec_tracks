@@ -46,10 +46,10 @@ export default class Song extends Component {
         <div className={styles.songVersion}>{this.props.song.version}</div>
         
         <div className={styles.buttons}>
-          <div className={styles.playButton}>
+          <div className={styles.playButton} onClick={() => this.props.play(this.props.song.id)}>
             <FontAwesomeIcon icon={faPlay} id={styles.playButton} />
           </div>
-          <div>
+          <div onClick={() => this.props.queue(this.props.song.id)}>
             <FontAwesomeIcon icon={faTasks} id={styles.queueButton} />
           </div>
         </div>
@@ -58,7 +58,6 @@ export default class Song extends Component {
           <div id={styles.innerBox}>${this.props.song.price}</div>
           <div id={styles.boxArrow} onClick={this.showMenu}><FontAwesomeIcon icon={faChevronDown} /></div>
           {
-            //Jeff wuz here
             this.state.showMenu
               && (
                 <div className={styles.menu}>

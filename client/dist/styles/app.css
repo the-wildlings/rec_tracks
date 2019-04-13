@@ -187,8 +187,8 @@ body {
   background-color: #262626;
   border-top-right-radius: 42%;
   border-bottom-right-radius: 42%;
-  border-top-left-radius: 50%;
-  border-bottom-left-radius: 50%;
+  border-top-left-radius: 37%;
+  border-bottom-left-radius: 37%;
   margin-bottom: 10px;
   margin-left: 25px;
   transition: 0.3s;
@@ -214,6 +214,7 @@ body {
  width: 1.66em;
  padding-top: 8px;
  transition: 0.3s;
+ margin-top: 2px;
 }
 
 
