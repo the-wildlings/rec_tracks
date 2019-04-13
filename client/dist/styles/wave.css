@@ -289,15 +289,31 @@
 	float: left;
 }
 
+.remixersRow {
+	display: inline-block;
+	margin-bottom: 10px;
+}
+
 .remixers {
 	font-size: 14px;
 	font-family: "Core Sans E", Arial, sans-serif;
 	/* color: #8C8C8C; */
 	font-weight: 200;
 	letter-spacing: 1px;
-	/* margin-right: 5px; */
-	margin-bottom: 20px;
+	margin-right: 5px;
+	float: left;
 }
+
+.remixersName {
+	font-family: 'Source Sans Pro', Arial, sans-serif;
+	font-weight: 600;
+	color: white;
+	font-size: 14px;
+	letter-spacing: 1px;
+	float: left;
+	margin-right: 1100px;
+}
+
 
 /*
   ========================================

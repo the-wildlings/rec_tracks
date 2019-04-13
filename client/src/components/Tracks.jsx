@@ -34,7 +34,7 @@ const Track = (props) => {
         <div className={styles.priceCol}></div>
       </div>
 
-      {props.songList.map((song, index) => <TrackItem song={song} key={index} play={props.play} queue={props.queue} />)}
+      {props.songList.map((song, index) => <TrackItem song={song} key={index} index={index} play={props.play} queue={props.queue} clickedSong={props.clickedSong} />)}
     </div>
   )
 }

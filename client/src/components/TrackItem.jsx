@@ -36,7 +36,7 @@ class TrackItem extends Component {
           <div id={styles.miniPlay} onClick={() => this.props.play(this.props.song.id)}><FontAwesomeIcon icon={faPlay} /> </div>
           <FontAwesomeIcon icon={faTasks} id={styles.miniQueue} onClick={() => this.props.queue(this.props.song.id)}/>
         </div>
-        <div className={styles.titleCol}>
+        <div className={styles.titleCol} onClick={() => this.props.clickedSong(this.props.index)}>
           <span className={styles.titleDetail}>{this.props.song.title}</span> {/* */
           }<span className={styles.versionDetail}>{this.props.song.version}</span>
         </div>

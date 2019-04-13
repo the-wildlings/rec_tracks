@@ -40,9 +40,9 @@ export default class Song extends Component {
 
       <div className={styles.songName}>
         <div className={styles.songTitle}>{this.props.song.title}</div>
-        <div>
+        {/* <div>
           {this.props.song.remixers}
-        </div>
+        </div> */}
         <div className={styles.songVersion}>{this.props.song.version}</div>
         
         <div className={styles.buttons}>
@@ -176,13 +176,18 @@ export default class Song extends Component {
       <div className={styles.artistRow}>
         <div className={styles.artist}>ARTISTS</div>
         <div className={styles.artistName}>{this.props.song.artist}</div>
-        <div className={styles.release}>RELEASE</div>
+        {
+          this.props.song.version === 'Original Mix' &&
+          <div className={styles.release}>RELEASE</div>
+        }
       </div>
       
       { this.props.song.version !== 'Original Mix' &&
-          <div className={styles.remixers}>
-            REMIXERS
-          </div>
+        <div className={styles.remixersRow}>
+          <div className={styles.remixers}>REMIXERS</div>
+          <div className={styles.artistName}>{this.props.song.remixers}</div> 
+          <div className={styles.release}>RELEASE</div>
+        </div>
       }
 
       <div className={styles.waveAlbumRow}>
@@ -200,7 +205,7 @@ export default class Song extends Component {
             LENGTH
           </div>
           <div className={styles.length}>
-            {Math.floor(this.props.song.length / 60)}:{
+            {Math.ceil(this.props.song.length / 60)}:{
               String(this.props.song.length % 60).length < 2 ? String(this.props.song.length % 60) + 0 : this.props.song.length % 60
               }
           </div>

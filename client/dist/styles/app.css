@@ -74,6 +74,7 @@ body {
 
 .titleCol {
   flex: 28%;
+  cursor: pointer;
 }
 
 .artistCol {
