@@ -32,7 +32,7 @@ class TrackItem extends Component {
     return (
       <div className={styles.row}>
         <div className={`${styles.playCol} ${styles.playDetail}`}>
-          <img src="https://cdn.cp.adobe.io/content/2/rendition/71d1c3da-f692-4ab8-8952-cff3b35ee3b9/version/1/format/jpg/dimension/width/size/1200" className={styles.pic}/>
+          <img src={this.props.song.albumArt} className={styles.pic}/>
           <div id={styles.miniPlay} onClick={() => this.props.play(this.props.song.id)}><FontAwesomeIcon icon={faPlay} /> </div>
           <FontAwesomeIcon icon={faTasks} id={styles.miniQueue} onClick={() => this.props.queue(this.props.song.id)}/>
         </div>

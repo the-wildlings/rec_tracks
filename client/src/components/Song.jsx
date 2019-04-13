@@ -187,10 +187,10 @@ export default class Song extends Component {
 
       <div className={styles.waveAlbumRow}>
         <div className={styles.wave}>
-          <WaveForm svg={"https://s3-us-west-1.amazonaws.com/airbnbeats/Database+Media/Waveforms/Riviera-Kartell.svg"} />
+          <WaveForm svg={this.props.song.waveform} />
         </div>
         <div>
-          <img src="https://s3-us-west-1.amazonaws.com/airbnbeats/Database+Media/Album+Art/Riviera-Kartell.jpg" className={styles.album}/>
+          <img src={this.props.song.albumArt} className={styles.album}/>
         </div>
       </div>
 

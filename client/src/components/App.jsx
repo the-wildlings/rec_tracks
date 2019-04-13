@@ -8,6 +8,7 @@ export default class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      allSongs: [],
       songList: [],
       currentSong: []
     }
@@ -17,6 +18,7 @@ export default class App extends Component {
 
   componentDidMount() {
     this.fetchSongs();
+    // this.randomSongs();
   }
 
   addToPlayer(id) {
@@ -39,6 +41,15 @@ export default class App extends Component {
     .then(data => this.setState({songList: data.data}))
     .catch(err => console.error(err));
   }
+
+  // randomSongs() {
+  //   while (this.state.songList.length < 20) {
+  //     let rand = this.state.allSongs[Math.round(Math.random() * (this.state.allSongs.length - 1))];
+  //     if (!this.state.songList.includes(rand)) {
+  //       this.state.songList.push(rand);
+  //     }
+  //   }
+  // }
 
   render() {
     return (

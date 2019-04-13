@@ -10,17 +10,19 @@ db.once('open', function () {
 var bpSchema = new mongoose.Schema({
   id: {type: Number, unique: true, allowNull: false},
   title: {type: String, allowNull: false},
-  version: {type: String, allowNul: false},
-  artist: { type: String, allowNul: false },
-  album: { type: String, allowNul: false },
-  remixers: { type: String, allowNul: false },
-  genre: { type: String, allowNul: false },
-  label: { type: String, allowNul: false },
-  released: { type: String, allowNul: false },
-  key: { type: String, allowNul: false },
-  bpm: { type: Number, allowNul: false },
-  length: { type: Number, allowNul: false },
-  price: { type: Number, allowNul: false },  
+  version: {type: String, allowNull: false},
+  artist: { type: String, allowNull: false },
+  album: { type: String, allowNull: false },
+  remixers: { type: String},
+  genre: { type: String, allowNull: false },
+  label: { type: String, allowNull: false },
+  released: { type: String, allowNull: false },
+  key: { type: String, allowNull: false },
+  bpm: { type: Number, allowNull: false },
+  length: { type: Number, allowNull: false },
+  price: { type: Number, allowNull: false },  
+  albumArt: { type: String, allowNull: false },
+  waveform: { type: String, allowNull: false }
 });
 
 var BeatPorts = mongoose.model('BeatPorts', bpSchema);
