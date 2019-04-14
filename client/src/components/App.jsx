@@ -61,7 +61,6 @@ export default class App extends Component {
   randomTrack() {
     // this.state.allSongs[Math.floor(Math.random() * 100)]
     let randSong = this.state.allSongs[Math.floor(Math.random() * 100)]
-    console.log('yes')
     this.setState({currentSong: randSong})
   }
 

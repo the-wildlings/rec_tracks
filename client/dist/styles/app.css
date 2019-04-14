@@ -96,6 +96,7 @@ body {
   width: 1350px;
   white-space: nowrap;
   flex-wrap: nowrap;
+  margin-bottom: 500px;
 }
 
 .priceCol {
