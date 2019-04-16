@@ -24,21 +24,21 @@ export default class App extends Component {
 
   addToPlayer(id) {
     axios
-    .get(`/api/play/${id}`)
+    .get(`http://54.165.200.109:3069/api/play/${id}`)
     .then(data => data)
     .catch(err => console.error(err))
   }
 
   addToQueue(id) {
     axios
-    .get(`/api/queue/${id}`)
+    .get(`http://54.165.200.109:3069/api/queue/${id}`)
     .then(data => data)
     .catch(err => console.error(err))
   }
 
   fetchSongs() {
     axios
-    .get('/api/beats')
+    .get('http://54.165.200.109:3069/api/beats')
     .then(data => this.setState({allSongs: data.data}, () => {this.randomSongs(); this.randomTrack()}))
     .catch(err => console.error(err));
   }
