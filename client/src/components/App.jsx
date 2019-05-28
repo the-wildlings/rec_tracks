@@ -1,6 +1,7 @@
 import styles from '../../dist/styles/app.css';
 import React, { Component } from 'react';
 import Tracks from './Tracks';
+import Footer from './Footer';
 import Song from './Song';
 import axios from 'axios';
 
@@ -75,6 +76,7 @@ export default class App extends Component {
           <Song song={this.state.currentSong} play={this.addToPlayer} queue={this.addToQueue}/>
         }
         <Tracks songList={this.state.songList} play={this.addToPlayer} queue={this.addToQueue} clickedSong={this.clickedSong}/>
+        <Footer />
       </div>
     )
   }

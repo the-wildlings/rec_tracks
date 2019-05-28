@@ -8,6 +8,8 @@
 
 body {
   background-color: #262626;
+  margin: 0;
+  padding: 0;
 }
 
 .element {
@@ -96,7 +98,7 @@ body {
   width: 1350px;
   white-space: nowrap;
   flex-wrap: nowrap;
-  margin-bottom: 500px;
+  margin-bottom: 25px;
 }
 
 .priceCol {
