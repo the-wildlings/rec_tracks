@@ -34,14 +34,14 @@
   float: left;
 }
 
-span {
+.container span {
   color: #ffffff;
   font-size: 14px;
   letter-spacing: 1.5px;
   font-weight: 400;
 }
 
-li {
+.container li {
   list-style-type: none;
   font-weight: 300;
   padding-bottom: 4px;
@@ -49,16 +49,17 @@ li {
   font-size: 13px;
 }
 
-li:hover {
+.container li:hover {
   color: #ffffff;
+  cursor: pointer;
 }
 
-ul {
+.container ul {
   padding: 0;
   margin-top: 10px;
 }
 
-img {
+.container img {
   margin: 0;
   padding: 0;
 }
